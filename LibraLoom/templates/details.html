@@ -1,0 +1,14 @@
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% block title %}Book Details{% endblock %}
+{% block content %}
+    <h1>Book Details</h1>
+    <ul>
+        <li><strong>Title:</strong> {{ book_data.Title }}</li>
+        <li><strong>Author:</strong> {{ book_data.Author }}</li>
+        <li><strong>Year:</strong> {{ book_data.Year }}</li>
+        <li><strong>Pages:</strong> {{ book_data.Pages }}</li>
+        <li><strong>Language:</strong> {{ book_data.Language }}</li>
+        <li><strong>Identifier:</strong> {{ book_data.Identifier }}</li>
+    </ul>
+    <img src="{{ book_data.Coverurl }}" alt="Book Cover">
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Home</title>
+</head>
+<body>
+    <!-- Navigation bar with links to other pages -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+            <li><a href="{% url 'advance_search' %}">Advance Search</a></li>
+            <li><a href="{% url 'anybook_pdf' %}">Anybook PDF</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Display some book details -->
+    <h1>Welcome to the Library</h1>
+    <h2>Featured Books</h2>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

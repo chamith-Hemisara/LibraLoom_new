@@ -1,0 +1,86 @@
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+    {load static}
+    <style>
+        .team-members {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            float: left;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            width: 25%; /* Set width to 25% for 4 columns */
+        }
+
+        .team-member img {
+            width: 100px; /* Set a specific width */
+            height: 100px; /* Set a specific height */
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="lead">
+            LibraLoom is a web application for creating and sharing patterns for the
+            <a href="https://www.ashford.co.nz/weaving/looms/ashford-loom-range/ashford-8-shaft-table-loom">Ashford 8 Shaft Table Loom</a>.
+        </p>
+        <p class="lead">
+            It is currently in development and is not yet ready for use.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Form</h2>
+                <form method="post" class="border p-4">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="{{ form.name.id_for_label }}">Name</label>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="{{ form.email.id_for_label }}">Email</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.message.id_for_label }}">Message</label>
+                        {{ form.message }}
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="col-md-3 team-member">
+                    <img src="{% static 'images/Chamith.png' %}" alt="Member 1" class="img-fluid">
+                    <p class="mt-2">Chamith Senadeera</p>
+                </div>
+                <div class="col-md-3 team-member">
+                    <img src="{% static 'images/banuka.jpeg' %}" alt="Member 2" class="img-fluid">
+                    <p class="mt-2">Bhanuka Chamod</p>
+                </div>
+                <div class="col-md-3 team-member">
+                    <img src="{% static 'images/Tharusha.jpg' %}" alt="Member 3" class="img-fluid">
+                    <p class="mt-2">Tharusha Sandeepa</p>
+                </div>
+                <div class="col-md-3 team-member">
+                    <img src="{% static 'images/chamidu.jpeg' %}" alt="Member 4" class="img-fluid">
+                    <p class="mt-2">Chamindu Isuranga</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

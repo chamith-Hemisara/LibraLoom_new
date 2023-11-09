@@ -1,0 +1,13 @@
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% block title %}Update Profile{% endblock %}
+{% block content %}
+
+    <body>
+        <h1>Update Member Profile</h1>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update Profile</button>
+        </form>
+    </body>
+{% endblock %}
