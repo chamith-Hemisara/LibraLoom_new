@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Book Summary</title>
+</head>
+<body>
+    <h1>Generate Book Summary</h1>
+
+    <form method="post" action="{% url 'generate_summary' %}">
+        {% csrf_token %}
+        <label for="book_name">Book Name:</label>
+        <input type="text" name="book_name" id="book_name" required><br>
+        <label for="summary_length">Summary Length:</label>
+        <input type="number" name="summary_length" id="summary_length" required><br>
+        <input type="submit" value="Generate Summary">
+    </form>
+
+    <br>
+
+    <div id="summary">
+        {% if summary %}
+            <h2>Generated Summary</h2>
+            <p>{{ summary }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

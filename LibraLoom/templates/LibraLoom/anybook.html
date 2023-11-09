@@ -1,0 +1,42 @@
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% block title %}Any Book{% endblock %}
+{% block content %}
+    <h1>Any Book</h1>
+    <p class="lead">LibraLoom is a web application for creating and sharing patterns for the <a href="https://www.ashford.co.nz/weaving/looms/ashford-loom-range/ashford-8-shaft-table-loom">Ashford 8 Shaft Table Loom</a>.</p>
+    <p class="lead">It is currently in development and is not yet ready for use.</p>
+
+    <h2>Search for a Book</h2>
+    <form method="post" action="{% url 'search_book' %}">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <input type="text" name="search_query" class="form-control" placeholder="Enter book title">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <h1>Search Results</h1>
+    <div class="row">
+        {% for book in results|slice:":10" %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.Title }}</h5>
+                        <p class="card-text">
+                            <strong>Author:</strong> {{ book.Author }}<br>
+                            <strong>Publisher:</strong> {{ book.Publisher }}<br>
+                            <strong>Year:</strong> {{ book.Year }}<br>
+                            <strong>Pages:</strong> {{ book.Pages }}<br>
+                            <strong>Language:</strong> {{ book.Language }}<br>
+                            <strong>Size:</strong> {{ book.Size }}<br>
+                            <strong>Extension:</strong> {{ book.Extension }}<br>
+                        </p>
+                        <a href="{{ book.Mirror_1 }}" class="btn btn-primary" target="_blank">Download</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

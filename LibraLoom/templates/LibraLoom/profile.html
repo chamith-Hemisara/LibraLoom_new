@@ -1,0 +1,42 @@
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="border p-4 rounded">
+            <h1 class="mb-4">Profile</h1>
+            <p class="lead">LibraLoom is a web application for creating and sharing patterns for the <a href="https://www.ashford.co.nz/weaving/looms/ashford-loom-range/ashford-8-shaft-table-loom">Ashford 8 Shaft Table Loom</a>.</p>
+            <p class="lead">It is currently in development and is not yet ready for use.</p>
+        </div>
+
+        {% if user.is_authenticated %}
+            <div class="border p-4 rounded mt-4">
+                <h2>User and Member Details</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-1"><strong>Username:</strong> {{ user.username }}</p>
+                        <p class="mb-1"><strong>Email:</strong> {{ user.email }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-1"><strong>Address:</strong> {{ user.member.address }}</p>
+                        <p class="mb-1"><strong>Phone Number:</strong> {{ user.member.phone_number }}</p>
+                        <p class="mb-1"><strong>Date of Birth:</strong> {{ user.member.member_dob }}</p>
+                        <p class="mb-1"><strong>Member Id:</strong> <strong>{{ user.member.member_id }}</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border p-4 rounded mt-4">
+                <h2>Reservation Details</h2>
+                {% for reservation in user.member.reservation_set.all %}
+                    <p class="mb-1"><strong>Book:</strong> {{ reservation.book.title }}</p>
+                    <p class="mb-1"><strong>Reserved At:</strong> {{ reservation.reserved_at }}</p>
+                    <p class="mb-1"><strong>Due Date:</strong> <span style="color: red;">{{ reservation.due_date }}</span></p>
+                    <p class="mb-1"><strong>Status:</strong> {{ reservation.status }}</p>
+
+                    <!-- Add other reservation details as needed -->
+                    <hr>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

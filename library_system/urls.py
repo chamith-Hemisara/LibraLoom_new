@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('LibraLoom/', include('LibraLoom.urls')),
     path('admin/', admin.site.urls),
-path('accounts/', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
+
 ]

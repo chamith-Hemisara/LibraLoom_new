@@ -1,0 +1,18 @@
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% block title %}Reserve Book{% endblock %}
+{% block content %}
+<h1>Reserve Book</h1>
+<h3>{{ book.title }}</h3>
+<p>Author: {{ book.author }}</p>
+<p>Category: {{ book.category }}</p>
+<p>ISBN: {{ book.ISBN }}</p>
+<form method="post">
+    {% csrf_token %}
+    <label for="due_date">Due Date:</label>
+    <label>
+        <input type="date" name="due_date">
+    </label>
+    <!-- Add other fields for reservation details -->
+    <button type="submit">Reserve</button>
+</form>
+{% endblock %}
