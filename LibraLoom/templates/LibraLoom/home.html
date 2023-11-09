@@ -1,0 +1,79 @@
+
+{% extends 'LibraLoom/templates/LibraLoom/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <!DOCTYPE html>
+<html class="text-light-emphasis" data-bs-theme="light" lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'home/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/Bold-BS4-CSS-Image-Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'home/Carousel_Image_Slider-mycarousel.css' %}">
+    <link rel="stylesheet" href="{% static 'home/Carousel_Image_Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'home/Footer-with-social-media-icons.css' %}">
+    <link rel="stylesheet" href="{% static  'home/Lightbox-Gallery-baguetteBox.min.css' %}">
+</head>
+
+<body>
+    <section class="photo-gallery py-4 py-xl-5">
+        <div class="row">
+            <div class="col">
+            <h3 class="text-center">Welcome to LibraLoom...</h3>
+            <h5 class="text-center">"Enriching Lives Through Books"</h5>
+            </div>
+        </div>
+        <div class="container">
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                <div class="carousel-inner">
+                    <div class="carousel-item active border rounded border-5"><img class="rounded img-fluid w-100 d-block border border-5 focus-ring" src="https://www.bowensec.moe.edu.sg/images/CCAs/Clubs%20&amp;%20Societies/Library/library%20main.jpg" alt="Slide Image"></div>
+                    <div class="carousel-item border rounded border-5"><img class="w-100 d-block" src="https://www.lbsim.ac.in/images/library-girl1.jpg" alt="Slide Image"></div>
+                    <div class="carousel-item border rounded border-5"><img class="w-100 d-block" src="https://www.yale-nus.edu.sg/library/wp-content/uploads/sites/5/2021/11/Library-Banner-Mobile.jpg" alt="Slide Image"></div>
+                </div>
+                <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2></h2>
+                    <h2>Vishion</h2>
+                    <p class="w-lg-50">"Enriching Lives Through Books"</p>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2>Mission</h2>
+                    <p class="w-lg-50">Our mission is to connect readers with knowledge, inspiration, and the joy of reading. We provide access to a diverse collection of books and resources, fostering a community of lifelong learners.</p>
+                </div>
+            </div>
+        </div>
+        <div class="border rounded border-1 shadow accordian">
+            <ul>
+                <li><a href="#"><img src="https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.ft.lk/assets/uploads/image_0a3b5e371a.jpg"></a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/5/5c/MadolDoova.jpg"></a></li>
+                <li><a href="#"><img src="https://images.gr-assets.com/books/1301313687l/4575781.jpg"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/sfc-datebook-wordpress/wp-content/uploads/sites/2/2018/12/62794278_DATEBOOK_books1223-1024x611.jpg"></a></li>
+                <li><a href="#"><img src="https://www.motherjones.com/wp-content/uploads/bestbooks2014master_0.jpg?w=990"></a></li>
+            </ul>
+        </div>
+    </section>
+    <script src="{% static 'home/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/bs-init.js' %}"></script>
+    <script src="{% static 'home/Lightbox-Gallery-baguetteBox.min.js' %}"></script>
+    <script src="{% static 'home/Lightbox-Gallery.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}
+```
+
