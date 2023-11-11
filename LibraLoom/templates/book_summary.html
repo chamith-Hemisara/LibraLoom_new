@@ -4,7 +4,7 @@
     <title>Generate Book Summary</title>
 </head>
 <body>
-    <h1>Generate Book Summary</h1>
+    <h3>Generate Book Summary</h3>
 
     <form method="post" action="{% url 'generate_summary' %}">
         {% csrf_token %}
@@ -19,7 +19,7 @@
 
     <div id="summary">
         {% if summary %}
-            <h2>Generated Summary</h2>
+            <h3>Generated Summary</h3>
             <p>{{ summary }}</p>
         {% endif %}
     </div>
