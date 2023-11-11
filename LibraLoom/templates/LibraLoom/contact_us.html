@@ -4,7 +4,6 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
-    {load static}
     <style>
         .team-members {
             border: 2px solid #ccc;
@@ -30,18 +29,16 @@
     </style>
 
     <div class="container">
-        <h1>Contact Us</h1>
+        <h3>Contact Us</h3>
         <p class="lead">
-            LibraLoom is a web application for creating and sharing patterns for the
-            <a href="https://www.ashford.co.nz/weaving/looms/ashford-loom-range/ashford-8-shaft-table-loom">Ashford 8 Shaft Table Loom</a>.
+            Contact us for any questions or suggestions you may have.
         </p>
         <p class="lead">
-            It is currently in development and is not yet ready for use.
         </p>
 
         <div class="row">
-            <div class="col-md-6">
-                <h2>Contact Form</h2>
+            <div class="col-12">
+                <h3>Contact Form</h3>
                 <form method="post" class="border p-4">
                     {% csrf_token %}
                     <div class="form-group mb-3">
@@ -62,10 +59,10 @@
         </div>
 
         <div class="row mt-4">
-            <h2>Our Team</h2>
+            <h3>Our Team</h3>
             <div class="team-members">
                 <div class="col-md-3 team-member">
-                    <img src="{% static 'images/Chamith.png' %}" alt="Member 1" class="img-fluid">
+                    <img src="{% static 'images/chamith.jpeg' %}" alt="Member 1" class="img-fluid">
                     <p class="mt-2">Chamith Senadeera</p>
                 </div>
                 <div class="col-md-3 team-member">
@@ -78,7 +75,7 @@
                 </div>
                 <div class="col-md-3 team-member">
                     <img src="{% static 'images/chamidu.jpeg' %}" alt="Member 4" class="img-fluid">
-                    <p class="mt-2">Chamindu Isuranga</p>
+                    <p class="mt-2">Chamidu Isuranga</p>
                 </div>
             </div>
         </div>

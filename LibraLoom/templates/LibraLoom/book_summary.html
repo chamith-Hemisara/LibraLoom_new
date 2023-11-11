@@ -28,8 +28,10 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Generate Book Summary</h1>
-
+        <h3 class="mb-4">Generate Book Summary</h3>
+        <p>"Unlock the magic of books with Code Highlights! 📚✨ Whether you prefer a detailed exploration or a quick dive, we've got you covered. Elevate your reading experience, embrace the joy, and discover new worlds. 🚀❤️ Ready to embark on your literary journey? </p>
+        <br>
+        <br>
         <form method="post" action="{% url 'generate_summary' %}" class="mb-4">
             {% csrf_token %}
             <div class="form-group">
