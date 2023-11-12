@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k9o(f#*&n%*9fq4e4_fyo+n=^^uby2&j&rax!^c3hb9!dng6v6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1', 'localhost').split(',')
 
 
 # Application definition
@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / 'LibraLoom/static'
 ]
-STATICFILES_ROOT = os.path.join(BASE_DIR, 'assets')
+STATICFILES_ROOT = os.path.join(BASE_DIR, 'static')
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
