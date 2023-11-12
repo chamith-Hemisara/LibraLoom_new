@@ -40,6 +40,7 @@ def advanced_search(request):
             title = form.cleaned_data.get('title')
             author = form.cleaned_data.get('author')
             category = form.cleaned_data.get('category')
+            image = form.cleaned_data.get('image')
             books = Book.objects.filter(
                 title__icontains=title,
                 author__icontains=author,
@@ -90,7 +91,7 @@ def reserve_book(request, book_id):
     reservation.save()
 
     # Redirect to the home page after a successful reservation
-    return redirect('home')
+    return redirect('profile')
 
 
 @login_required
@@ -108,7 +109,7 @@ def reserve_book(request, book_id):
         reservation.save()
 
         # Redirect to the home page after a successful reservation
-        return redirect('home')
+        return redirect('profile')
     except Book.DoesNotExist:
         return HttpResponse("Book does not exist")
     except Member.DoesNotExist:

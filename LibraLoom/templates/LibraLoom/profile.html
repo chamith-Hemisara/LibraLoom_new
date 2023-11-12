@@ -1,6 +1,15 @@
 {% extends 'LibraLoom/templates/LibraLoom/base.html' %}
 {% block title %}Profile{% endblock %}
 {% block content %}
+    <style>
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Creates a circular shape */
+            object-fit: cover; /* Maintains image aspect ratio */
+        }
+    </style>
+
     <div class="container mt-5">
         <div class="border p-4 rounded">
             <h1 class="mb-4">Profile</h1>
@@ -14,6 +23,7 @@
                     <div class="col-md-6">
                         <p class="mb-1"><strong>Username:</strong> {{ user.username }}</p>
                         <p class="mb-1"><strong>Email:</strong> {{ user.email }}</p>
+                        <img src="{{ user.member.member_image.url }}" alt="image" class="member-image">
                     </div>
                     <div class="col-md-6">
                         <p class="mb-1"><strong>Address:</strong> {{ user.member.address }}</p>
@@ -31,8 +41,6 @@
                     <p class="mb-1"><strong>Reserved At:</strong> {{ reservation.reserved_at }}</p>
                     <p class="mb-1"><strong>Due Date:</strong> <span style="color: red;">{{ reservation.due_date }}</span></p>
                     <p class="mb-1"><strong>Status:</strong> {{ reservation.status }}</p>
-
-                    <!-- Add other reservation details as needed -->
                     <hr>
                 {% endfor %}
             </div>

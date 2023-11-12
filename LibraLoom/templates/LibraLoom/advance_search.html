@@ -1,6 +1,14 @@
 {% extends 'LibraLoom/templates/LibraLoom/base.html' %}
-{% block title %}Advance search{% endblock %}
+{% block title %}Book Details{% endblock %}
 {% block content %}
+<style>
+    .book-image {
+        max-width: 200px; /* Set a consistent width */
+        height: auto; /* Maintain aspect ratio */
+        /* Add any additional styling if needed */
+    }
+</style>
+
 <div class="container mt-5">
     <h3 class="text-center mb-4">Advanced Search</h3>
     <form method="post" class="form">
@@ -33,17 +41,28 @@
         <ul class="list-group">
             {% for book in books %}
                 <li class="list-group-item">
-                    <h3>{{ book.title }}</h3>
-                    <p>Author: {{ book.author }}</p>
-                    <p>Category: {{ book.category }}</p>
-                    <p>ISBN: {{ book.ISBN }}</p>
-                    <p>Publication Date: {{ book.publication_date }}</p>
-                    {% if book.book_Availability %}
-                        <p class="text-success">This book is available.</p>
-                    {% else %}
-                        <p class="text-danger">This book is not available.</p>
-                    {% endif %}
-                    <a href="{% url 'book_details' book.id %}" class="btn btn-info">View Details</a>
+                    <div class="d-flex">
+                        <div class="flex-grow-1">
+                            <h3>{{ book.title }}</h3>
+                            <p>Author: {{ book.author }}</p>
+                            <p>Category: {{ book.category }}</p>
+                            <p>ISBN: {{ book.ISBN }}</p>
+                            <p>Publication Date: {{ book.publication_date }}</p>
+                            <p>Language: {{ book.language }}</p>
+                            {% if book.book_Availability %}
+                                <p class="text-success">This book is available.</p>
+                                <form method="post" action="{% url 'reserve_book' book.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-info">Reserve Book</button>
+                                </form>
+                            {% else %}
+                                <p class="text-danger">This book is not available.</p>
+                            {% endif %}
+                        </div>
+                        <div class="align-self-end p-3" style="border: 0px solid #000; padding: 20px;">
+                            <img src="{{ book.book_image.url }}" alt="{{ book.title }}" class="img-fluid border book-image" style="max-width: 200px; height: auto; float: right;">
+                        </div>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
