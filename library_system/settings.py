@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k9o(f#*&n%*9fq4e4_fyo+n=^^uby2&j&rax!^c3hb9!dng6v6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'library_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'library_system',
+        'NAME':'doadmin',
         'USER':'root',
         'PASSWORD':'chamith',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'HOST':'librarysystem20-do-user-14977883-0.c.db.ondigitalocean.com',
+        'PORT':'25060',
     }
 }
 
