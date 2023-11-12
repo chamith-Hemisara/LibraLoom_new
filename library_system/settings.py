@@ -189,8 +189,9 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'category_images')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
 
 
 

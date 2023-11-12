@@ -9,7 +9,7 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField()
-    category_image = models.ImageField(upload_to='category_images/', blank=True)
+    category_image = models.ImageField(upload_to='category', blank=True)
 
     def __str__(self):
         return self.name
@@ -21,7 +21,7 @@ class Book(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, to_field='name')
     # Add other fields like ISBN, publication date, etc.
     book_id = models.CharField(max_length=100)
-    book_image = models.ImageField(upload_to='book_images/', blank=True, null=True)
+    book_image = models.ImageField(upload_to='Books', blank=True, null=True)
     book_download_link = models.CharField(max_length=100,null=True,blank=True)
     book_description = models.TextField()
     ISBN = models.CharField(max_length=100)
@@ -38,7 +38,7 @@ class Member(models.Model):
     # Add additional member-related fields like address, phone number, etc.
     address = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=100)
-    member_image = models.ImageField(upload_to='member_images/', blank=True, null=True)
+    member_image = models.ImageField(upload_to='Members', blank=True, null=True)
     member_id = models.CharField(max_length=100)
     member_status = models.CharField(max_length=100)
     member_type = models.CharField(max_length=100, null=True, blank=True)
