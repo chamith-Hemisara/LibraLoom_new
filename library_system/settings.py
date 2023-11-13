@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +26,7 @@ SECRET_KEY = 'django-insecure-k9o(f#*&n%*9fq4e4_fyo+n=^^uby2&j&rax!^c3hb9!dng6v6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'library_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'library_system',
-        'USER':'root',
-        'PASSWORD':'chamith',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'NAME':'defaultdb',
+        'USER':'doadmin',
+        'PASSWORD':'AVNS_z3xYuJd0Hfp-zd-D4ti',
+        'HOST':'librarysystem20-do-user-14977883-0.c.db.ondigitalocean.com',
+        'PORT':'25060',
     }
 }
 
@@ -136,10 +136,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR / 'LibraLoom/static'
 ]
+
+
+
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -192,6 +195,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+django_heroku.settings()
 
 
 
