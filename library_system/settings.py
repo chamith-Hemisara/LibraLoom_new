@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'library_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.mysql',
-        'NAME':'library_system',
-        'USER':'root',
-        'PASSWORD':'chamith',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'NAME':'defaultdb',
+        'USER':'doadmin',
+        'PASSWORD':'AVNS_84vvoxgo60QJ2sijHQR',
+        'HOST':'db-mysql-nyc3-66723-do-user-14977883-0.c.db.ondigitalocean.com',
+        'PORT':'25060',
     }
 }
 
