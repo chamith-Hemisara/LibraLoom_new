@@ -276,7 +276,6 @@ neotime==1.7.4
 nest-asyncio==1.5.5
 netifaces==0.11.0
 networkx==2.6.3
-nltk==3.6.7
 numba==0.55.1
 numexpr==2.8.1
 oauth2client==4.1.3
