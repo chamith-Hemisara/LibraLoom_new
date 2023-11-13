@@ -137,7 +137,6 @@ feedgenerator==2.0.0
 feedparser==6.0.8
 filebrowser-safe==1.1.1
 filelock==3.4.2
-Fiona==1.8.21
 Flask==2.1.2
 Flask-Admin==1.6.0
 Flask-Babel==2.0.0
