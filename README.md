@@ -115,11 +115,13 @@ If you're interested in contributing to LibraLoom or have feedback, check out ou
 
 ### Acknowledgments
 Acknowledge any libraries, APIs, or resources used in the project:
-
-### Libgen API
+-Libgen API
 -Plam API (Google)
--Video Demonstration 🎥
--Explore the diverse functionalities and features of LibraLoom in action: [](https://github.com/chamith-Hemisara/LibraLoom_new/assets/82514256/8c89a9d5-1a06-47ca-8b28-eade49e9398b)
+
+### Video Demonstration 🎥
+-Explore the diverse functionalities and features of LibraLoom in action:
+
+[![Watch the video]([https://i.stack.imgur.com/Vp2cE.png)](https://youtu.be/vt5fpE0bzSY](https://github.com/chamith-Hemisara/LibraLoom_new/assets/82514256/8c89a9d5-1a06-47ca-8b28-eade49e9398b)https://github.com/chamith-Hemisara/LibraLoom_new/assets/82514256/8c89a9d5-1a06-47ca-8b28-eade49e9398b)
 
 Thank you for your understanding, and we hope you enjoy exploring LibraLoom!
 
