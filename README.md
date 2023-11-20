@@ -93,4 +93,36 @@ An administrative interface enabling librarians to manage books, categories, mem
 7.**Access the Application:**
 	Open a web browser and go to http://127.0.0.1:8000 or         http://localhost:8000 to explore LibraLoom.
 
+ ## Deployment Note
+
+### LibraLoom on PythonAnywhere
+[LibraLoom on PythonAnywhere](https://chamithlibraloom.pythonanywhere.com/LibraLoom/home/)
+
+### Functionalities:
+While the deployed version showcases the key features of LibraLoom, including the Home Page, Advanced Search, Any Book Details, Any Book Summary, Profile Page, Admin Dashboard, and Social Sign-In Page, it's important to note a few limitations.
+
+### Limited Book and Category Display:
+As a free service, we have included a restricted set of content to demonstrate the platform's capabilities. The current deployment features only five books and five categories. This limitation is in place as per the requirements of the free service.
+
+### Book Additions:
+We add books to the platform in accordance with our specific requirements. While the number of books is limited in this demonstration, the application's structure allows for easy expansion to include a more extensive library collection.
+
+### Social Authentication and Any Book Details:
+Due to the constraints of the free version, the social authentication feature and the "Any Book Details" pages may not be fully operational. We encourage you to explore and test the other functionalities available on the deployed platform.
+
+### Get Involved
+If you're interested in contributing to LibraLoom or have feedback, check out our GitHub repository. Feel free to explore the codebase, report issues, and contribute to the growth of the project.
+
+### Acknowledgments
+Acknowledge any libraries, APIs, or resources used in the project:
+
+### Libgen API
+-Plam API (Google)
+-Video Demonstration 🎥
+-Explore the diverse functionalities and features of LibraLoom in action: [[Add Link to Video](https://github.com/chamith-Hemisara/LibraLoom_new/assets/82514256/8c89a9d5-1a06-47ca-8b28-eade49e9398b)https://github.com/chamith-Hemisara/LibraLoom_new/assets/82514256/8c89a9d5-1a06-47ca-8b28-eade49e9398b]
+
+Thank you for your understanding, and we hope you enjoy exploring LibraLoom!
+
+
+
 
